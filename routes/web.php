@@ -10,11 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Rota Welcome
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return view('template.app');
 });
 
-Route::group(['prefix'=> 'pessoas'],function(){
-    Route::get('','PessoasController@index');
+Route::group(['prefix' => 'pessoas'], function(){
+    Route::get('/', "PessoasController@index");
 });
