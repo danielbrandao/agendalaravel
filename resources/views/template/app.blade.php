@@ -2,9 +2,9 @@
 <head>
     <!-- Required meta tags -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+     <link href='https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css' rel=stylesheet> <link href="data:text/css;charset=utf-8," rel=stylesheet data-href=../dist/css/bootstrap-theme.min.css id=bs-theme-stylesheet> <link href='https://getbootstrap.com/docs/3.3/assets/css/docs.min.css' rel=stylesheet>
 
-
-    <title>Hello, world!</title>
+    <title>Agenda Laravel</title>
     
 </head>
 <body>
@@ -17,8 +17,8 @@
           Contatos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Novo</a>
-          <a class="dropdown-item" href="#">Listar</a>
+          <a class="dropdown-item" href="{{url('pessoas/novo')}}">Novo</a>
+          <a class="dropdown-item" href="{{ url('pessoas/')}}">Listar</a>
         </div>
       </li>
     </ul>
