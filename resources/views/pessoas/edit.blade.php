@@ -10,9 +10,14 @@
             <!-- conservando o processo toixco -->
             {{ csrf_field()}}
             <input type="hidden" name="id" value="{{$pessoa->id}}"/>
-            <div class="form-group">
+            <div class="form-group col-md-12 {{ $errors->has('nome') ? 'has-error' : ''}}">
                 <label class="control-label">Nome</label>
                 <input type='text' value="{{$pessoa->nome}}" name='nome' class="form-control  col-md-12" placeholder='Nome' />
+                @if($errors->has('nome'))
+                    <span class="help-block">
+                    {{ $errors->first('nome')}}
+                    </span>
+                @endif
             </div>
             <button class="btn btn-primary" style="float: right">Salvar</button>
         </form>

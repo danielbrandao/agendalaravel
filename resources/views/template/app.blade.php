@@ -18,7 +18,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{url('pessoas/novo')}}">Novo</a>
-          <a class="dropdown-item" href="{{ url('pessoas/')}}">Listar</a>
+          <a class="dropdown-item" href="{{ url('pessoas/A')}}">Listar</a>
         </div>
       </li>
     </ul>

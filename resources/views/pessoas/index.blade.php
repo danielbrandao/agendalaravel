@@ -2,7 +2,27 @@
 
 @section('content')
 <div>
-    <h3>Lista de contatos</h3>
+    <div class="col-sm-12">
+    @foreach(range('A','Z') as $letra)
+        <div class="btn-group">
+            <a href="{{url('pessoas/' . $letra)}}" class="btn btn-primary {{ $letra == $criterio ? 'disabled': ''}}">
+                {{ $letra }}
+            </a>
+        </div>
+    @endforeach
+    </div>
+    <div class="col-md-12">
+        <h3 class="col-md-8">Lista de contatos - {{ $criterio }} </h3>
+         <form action="{{url('/pessoas/busca')}}" method="post">
+            <div style="margin: 20px" class="col-sm-4 input-group">
+                {{csrf_field()}}
+                <input type="text" class="form-control" name="criterio" placeholder="Digite uma letra">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Buscar</button>
+                </div>
+            </div>
+        </form>
+    </div>
     @foreach($pessoas as $pessoa)
     <div class="col-md-3">
         <div class="panel panel-primary"> 
