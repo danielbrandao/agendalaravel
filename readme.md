@@ -9,8 +9,7 @@
 
 ## About Project
 
-This project is based in videos by the @openWebGreen developer @FelipeBohnertPaetzold. Is a contact list CRUD made in @laravel
-
+this project is based in videos by the developer of @openWebGreen @FelipeBohnertPaetzold. Is a contact phone list. A complete CRUD made with @laravel
 
 ## About Laravel
 
